@@ -1,0 +1,31 @@
+{
+    "name": "node-hx",
+    "bin": "bin/main.js",
+    "version": "1.0.0",
+    "description": "Simple 3D game test",
+    "dependencies": {
+        "pkg": "^5.5.2",
+        "hyperswarm": "^2.15.3",
+        "blessed-contrib": "^4.11.0",
+        "blessed-xterm": "^1.4.2",
+        "reblessed": "^0.1.84"
+    },
+    "pkg": {
+        "targets": [
+            "latest-linux-x64",
+            "latest-windows-x64"
+        ],
+        "assets": [
+            "node_modules/**/**/*"
+        ],
+        "scripts": "bin/**.js",
+        "outputPath": "dist"
+    },
+    "scripts": {
+        "build": "haxelib install all --always && haxe default.hxml && npm i",
+        "clean": "rm -rf node_modules package-lock.json bin dist"
+    },
+    "keywords": [],
+    "author": "Kyrasuum",
+    "license": "GNU"
+}
