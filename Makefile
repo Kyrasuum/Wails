@@ -46,8 +46,9 @@ clean-all: clean clean-vol
 
 .PHONY: deps
 #: Install dependencies for targets in this makefile
-deps: .deps
-.deps:
+deps:
+	@cd frontend/src/p2p && npm run setup
+	@cd frontend/src/p2p && npm run build
  
 .PHONY: dev-deps
 #: Installs all depedencies for development

@@ -2,6 +2,7 @@
 release
 dist
 bin
+.haxelib/*
 
 # Logs
 logs

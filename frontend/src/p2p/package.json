@@ -22,7 +22,8 @@
         "outputPath": "dist"
     },
     "scripts": {
-        "build": "haxelib install all --always && haxe default.hxml && npm i",
+    	"setup": "haxelib install default.hxml --always && npm i", 
+        "build": "haxe default.hxml",
         "clean": "rm -rf node_modules package-lock.json bin dist"
     },
     "keywords": [],
